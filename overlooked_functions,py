@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Sep 21 20:41:35 2019
+
+@author: Patrick
+"""
+
+#bool
+bool(' ') #False
+bool('good') #True
+bool([]) #False
+bool(['kind']) #True
+bool({})#False
+bool(range(0)) #False
+bool(range(5)) #True
+bool(None) #False
+
+#works same as
+numbers = []
+if not numbers:
+    print("The list is empty")
+
+#enumerate
+# Whenever you need to count upward, one number at a time,
+# while looping over an iterable at the same time
+#e.g keeping track of line number in a file
+with open('hello.txt', mode = 'rt') as the_file:
+    for n, line in enumerate(the_file, start = 1):
+        print(f"{n:03}", line)
+
+#zip
+#looping over two iterables at once
+    
+iterable_one = ['pak', 'pok', 'pek', 'pon', 'pin']
+iterable_two = [1, 2, 3, 4, 5]
+
+for it2, it1 in zip(iterable_two, iterable_one):
+    print(it2, it1)
+
+#reversed
+for i in reversed(iterable_two):
+    print(i)
+
+iterable_two[::-1]#will also reverse the list
+
+iterable_two.reverse()
+for n in iterable_two:
+    print(n)
+    
