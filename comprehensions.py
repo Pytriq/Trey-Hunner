@@ -17,6 +17,8 @@ list1 = [2, 45, 75, 56, 24, 89, 36, 80]
 unconditional list comprehension
 """
 list2 = [n for n in list1]
+#or just
+list2 = list(list1)
 
 """
 conditional list comprehension
@@ -55,8 +57,15 @@ first_lettrs = {letter[0] for letter in words}
 print(first_lettrs)
 
 """
-set comprehension
+dict comprehension
 """
+#note, the dict() can easily replace dict compre
+#eg
+listp = [('IT','Italy'), ('KE','Kenya'), ('UG','Uganda')]
+dicto = {abbr: country for abbr, country in listp }
+#instead you could just
+dictp = dict(listp)
+
 #swap dictionary key and values
 original = {'F':'Female', 'M':'Male', 'Q':'Queer'}
 swapped = {}
